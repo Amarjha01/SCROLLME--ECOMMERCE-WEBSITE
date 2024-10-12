@@ -10,7 +10,7 @@ import { useToast } from "@chakra-ui/react";
 import { AUTH_ENDPOINTS } from "../api/endPoints";
 import axios from "axios";
 import { logOut } from "../store/Slices/UserSlice";
-
+import logo from '../assets/Scrollme.png'
 const Container = styled.div`
   height: 60px;
   width: 100%;
@@ -130,9 +130,10 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>
+          <Logo className=" h-11 flex justify-center ">
             <Link to="/">
-              SCROLL<span style={{ color: "teal" }}>ME</span>
+              {/* SCROLL<span style={{ color: "teal" }}>ME</span> */}
+              <img src={logo} alt="" className=" h-full object-cover" />
             </Link>
           </Logo>
         </Center>
